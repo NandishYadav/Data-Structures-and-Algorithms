@@ -1,0 +1,14 @@
+{
+  "name": "dsa_javascript",
+  "version": "1.0.0",
+  "description": "DSA",
+  "main": "index.js",
+  "scripts": {
+    "test": "node console.log(\"Hello World\")"
+  },
+  "keywords": [
+    "dsa"
+  ],
+  "author": "rny9",
+  "license": "ISC"
+}
