@@ -1,21 +1,25 @@
-const x =121;
-const y =10;
-const arr = [111,121,10]
-const n = 3;
- 
-function PalinArray(arr,n){
-    //code here
-    let output;
-    for(let i=0;i<(n);i++){
-        console.log(arr[i]!==parseInt(arr[i].toString().split("").reverse().join("")))
-        if(arr[i]!==parseInt(arr[i].toString().split("").reverse().join(""))){
-            output = 0;
-            break;
-        }else{
-            output = 1
-        }
-    }
-    return output
-}
+const fs = require('fs');
+const path = require('path');
 
-console.log(PalinArray(arr,n));
+
+const input  = fs.readFileSync(path.join(__dirname, 'input.txt'), 'utf-8').split('\n');
+
+
+function part1() {
+    let sum = 0;
+    for (let i = 0; i < input.length; i++) {
+        sum += parseInt(input[i]);
+    }
+    return sum;
+};
+
+
+
+function main(){
+    const ws = fs.createWriteStream(path.join(__dirname, 'output.txt'));
+    const op = part1();
+    ws.write(op + '\n');
+    ws.end();
+};
+
+main();
